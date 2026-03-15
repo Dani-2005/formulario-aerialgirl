@@ -1,0 +1,195 @@
+/* Reset y estilos base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    /* Color suave de fondo con degradado pastel */
+    background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 700px;
+}
+
+h1 {
+    color: #ad1457;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #777;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #d63384;
+    border-bottom: 2px solid #f8bbd0;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+/* Estilos de inputs, textarea y select */
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #d63384;
+    box-shadow: 0 0 5px rgba(214, 51, 132, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.radio-group {
+    margin-top: 10px;
+    display: flex;
+    gap: 30px;
+}
+
+.radio-group input {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Caja de advertencia */
+.alert-box {
+    background: #fff9c4;
+    padding: 18px;
+    border-radius: 10px;
+    border-left: 5px solid #fbc02d;
+    margin: 30px 0;
+    font-size: 0.9rem;
+    color: #856404;
+    line-height: 1.5;
+}
+
+/* Botón de envío */
+button {
+    background: #d63384;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
+}
+
+button:hover {
+    background: #ad1457;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(173, 20, 87, 0.4);
+}
+
+
+.radio-group {
+    margin-top: 10px;
+    display: flex;
+    gap: 30px; /* Espacio entre el Sí y el No */
+}
+
+/* Contenedor para poner inputs lado a lado */
+.input-row {
+    display: flex;
+    flex-direction: column; /* Por defecto uno debajo del otro (móvil) */
+    gap: 10px;
+    margin-top: 5px;
+}
+
+/* En pantallas más grandes (PC/Tablets) se ponen de lado */
+@media (min-width: 600px) {
+    .input-row {
+        flex-direction: row;
+    }
+    
+    .input-row input {
+        flex: 1; /* Esto hace que ambos midan lo mismo */
+    }
+}
+
+/* En móviles, uno debajo del otro */
+@media (max-width: 600px) {
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* --- DISEÑO RESPONSIVO --- */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Menos espacio alrededor en el celular */
+        align-items: flex-start; /* Para que si es muy largo, empiece desde arriba */
+    }
+
+    .form-container {
+        padding: 20px 15px; /* Reducimos el padding interno */
+        border-radius: 12px;
+        width: 100%; /* Forzamos a que use el 100% del ancho del móvil */
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.3rem; /* Título un poco más pequeño para que no se corte */
+    }
+
+    /* Hacemos que los radios se vean uno debajo del otro si el espacio es muy poco */
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

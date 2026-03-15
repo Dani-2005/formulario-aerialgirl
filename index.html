@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Aerial Girl Pole Dance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>📋 Ficha de Registro: Aerial Girl Pole Dance</h1>
+        <p class="intro">Tu seguridad es nuestra prioridad. Por favor, completa los siguientes datos antes de tu primera clase.</p>
+
+        <form name="registro-clases" method="POST" data-netlify="true">
+            
+            <section>
+                <h3>Información Personal</h3>
+                <label>Nombre Completo:</label>
+                <input type="text" name="nombre" placeholder="Ej. Daniela Valbuena" required>
+                
+                <label>Edad:</label>
+                <input type="number" name="edad" required>
+                
+                <label>Teléfono de contacto:</label>
+                <input type="tel" name="telefono" required>
+                
+                <label>Contacto de emergencia:</label>
+                <div class="input-row">
+                    <input type="text" name="emergencia_nombre" placeholder="Nombre del contacto" required>
+                    <input type="tel" name="emergencia_telefono" placeholder="Teléfono" required>
+                </div>
+            </section>
+
+            <section>
+                <h3>Experiencia Física</h3>
+                <label>¿Has practicado alguna disciplina aérea o deportiva antes? (Telas, aro, yoga, gimnasia, etc.)</label>
+                <textarea name="experiencia_previa"></textarea>
+                
+                <label>¿Cuál es tu nivel de actividad física actual?</label>
+                <select name="nivel_actividad">
+                    <option value="sedentario">Sedentario</option>
+                    <option value="ocasional">Ocasional</option>
+                    <option value="activo">Activo</option>
+                    <option value="atleta">Atleta</option>
+                </select>
+                
+                <label>¿Es tu primera vez en una barra de Pole Dance?</label>
+                <div class="radio-group">
+                    <label style="font-weight: normal;"><input type="radio" name="primera_vez" value="si"> Sí</label>
+                    <label style="font-weight: normal;"><input type="radio" name="primera_vez" value="no"> No</label>
+                </div>
+            </section>
+
+            <section>
+                <h3>Salud y Seguridad (¡Muy importante!)</h3>
+                <label>¿Tienes alguna lesión actual o pasada? (Muñecas, hombros, espalda, etc.)</label>
+                <textarea name="lesiones"></textarea>
+                
+                <label>¿Sufres de alguna condición médica? (Asma, hipertensión, vértigo, etc.)</label>
+                <textarea name="condiciones_medicas"></textarea>
+                
+                <label>¿Has tenido alguna cirugía en los últimos 6 meses?</label>
+                <input type="text" name="cirugias">
+                
+                <label>¿Existe la posibilidad de que estés embarazada?</label>
+                <div class="radio-group">
+                    <label style="font-weight: normal;">
+                        <input type="radio" name="embarazo" value="si" required> Sí
+                    </label>
+                    <label style="font-weight: normal;">
+                        <input type="radio" name="embarazo" value="no" required> No
+                    </label>
+                </div>
+                
+                <label>¿Tienes fobia a las alturas o a estar invertida (cabeza abajo)?</label>
+                <div class="radio-group">
+                    <label style="font-weight: normal;">
+                        <input type="radio" name="fobias" value="si" required> Sí
+                    </label>
+                    <label style="font-weight: normal;">
+                        <input type="radio" name="fobias" value="no" required> No
+                    </label>
+                </div>
+            </section>
+
+            <section>
+                <h3>Preferencias y Metas</h3>
+                <label>¿Qué te motiva a tomar esta clase?</label>
+                <input type="text" name="motivacion">
+                
+                <label>¿Hay algún estilo de música que te encante para bailar?</label>
+                <input type="text" name="musica">
+            </section>
+
+            <div class="alert-box">
+                <strong>⚠️ RECORDATORIO:</strong> 
+                Para tu seguridad y el cuidado de los equipos, el día de la clase <strong>NO</strong> apliques cremas, aceites o lociones en el cuerpo. ¡Ven lista para brillar!
+            </div>
+
+            <button type="submit">Enviar Registro</button>
+        </form>
+    </div>
+
+</body>
+</html>
