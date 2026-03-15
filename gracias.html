@@ -5,17 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Registro Exitoso!</title>
     <style>
-        body { font-family: sans-serif; background: #fce4ec; display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center; }
-        .card { background: white; padding: 40px; border-radius: 20px; shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        h1 { color: #d63384; }
-        .btn { display: inline-block; margin-top: 20px; padding: 15px 25px; background: #25d366; color: white; text-decoration: none; border-radius: 10px; font-weight: bold; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0;
+            text-align: center; 
+        }
+        .card { 
+            background: white; 
+            padding: 50px 30px; 
+            border-radius: 25px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+            max-width: 400px;
+            width: 90%;
+        }
+        .icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        h1 { 
+            color: #ad1457; 
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        p { 
+            color: #525050; 
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+        .footer-text {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #3f3d3d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
     </style>
 </head>
 <body>
     <div class="card">
-        <h1>¡Ficha enviada con éxito! ✨</h1>
-        <p>Gracias por unirte a Aerial Girl. Haz clic abajo para agendar tu clase.</p>
-        <a href="https://wa.me/58XXXXXXXXXX?text=Hola!%20Ya%20llene%20mi%20registro" class="btn">Chatear por WhatsApp</a>
+        <span class="icon">✨</span>
+        <h1>¡Registro Recibido!</h1>
+        <p>Tu información ha sido enviada correctamente. <br> ¡Gracias por unirte a la familia de <strong>Aerial Girl</strong>!</p>
+        
+        <div class="footer-text">Aerial Girl Pole Dance</div>
     </div>
 </body>
 </html>

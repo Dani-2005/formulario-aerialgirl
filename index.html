@@ -19,9 +19,17 @@
                 <label>Nombre Completo:</label>
                 <input type="text" name="nombre" placeholder="Ej. Daniela Valbuena" required>
                 
-                <label>Edad:</label>
-                <input type="number" name="edad" required>
-                
+                <div class="input-row">
+                        <div style="flex: 1;">
+                            <label>Edad:</label>
+                            <input type="number" name="edad" required>
+                        </div>
+                        <div style="flex: 2;">
+                            <label>Fecha de nacimiento:</label>
+                            <input type="date" name="fecha_nacimiento" required>
+                        </div>
+                </div>
+
                 <label>Teléfono de contacto:</label>
                 <input type="tel" name="telefono" required>
                 
